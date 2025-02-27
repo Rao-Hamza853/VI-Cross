@@ -10,7 +10,7 @@ const UserManagement = () => {
     <div className='flex'>
       <Sidebar/>
       <div className='bg-secondary w-full'>
-        <header className='h-28 px-6 py-4 flex items-center justify-between'>
+        <header className='h-24 px-6 py-4 flex items-center justify-between'>
           <h3 className='text-4xl text-black-light font-bold font-jakarta'>User Management</h3>
           <div className='h-full flex items-center gap-x-6'>
             <div className='flex items-center justify-center h-full p-5 gap-x-3 bg-primary rounded-3xl'>
