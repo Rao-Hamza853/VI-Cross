@@ -38,7 +38,7 @@ const UserManagement = () => {
   return (
     <div className='flex'>
       <Sidebar/>
-      <div className='bg-secondary w-full'>
+      <div className='bg-secondary w-full  pb-10'>
         <header className='h-24 px-8 py-4 flex items-center justify-between'>
           <h3 className='text-4xl text-black-light font-bold font-jakarta'>User Management</h3>
           <div className='h-full flex items-center gap-x-6'>
@@ -59,10 +59,10 @@ const UserManagement = () => {
             <h4 className='text-xl font-semibold text-black-light font-jakarta col-span-2'>User Role</h4>
             <h4 className='text-xl font-semibold text-black-light font-jakarta col-span-2'>Status</h4>
           </div>
-            <div className='h-screen overflow-y-auto scrollbar-hide pb-4'>
+            <div className='h-screen overflow-y-auto scrollbar-hide'>
               {
                 userDetails.map((data, index)=>(
-                  <div className={` grid grid-cols-10 items-center rounded-xl px-8 py-2 my-3 ${index % 2 === 0 ? "bg-transparent" :"bg-white/80"} `} key={index}>
+                  <div className={` grid grid-cols-10 items-center rounded-xl px-8 py-2 my-3 ${index % 2 === 0 ? "bg-transparent" :"bg-white/80 "} `} key={index}>
                     <h4 className='text-lg text-gray font-jakarta'>#78590</h4>
                     <div className='flex items-center gap-x-3 col-span-2'>
                       <img src={profilePic} alt="" className='rounded-full w-10' />
