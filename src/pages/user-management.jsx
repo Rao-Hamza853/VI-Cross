@@ -10,30 +10,75 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 const UserManagement = () => {
 
   const userDetails = [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
   ]
   return (
     <div className='flex'>
@@ -71,7 +116,7 @@ const UserManagement = () => {
                     <h4 className='text-lg text-gray font-jakarta col-span-3'>Johndoe@gmail.com</h4>
                     <h4 className='text-lg text-gray font-jakarta col-span-2 pl-7'>User</h4>
                     <div className='flex items-center justify-between  col-span-2'>
-                      <h4 className='text-lg text-gray font-jakarta'>* Pending</h4>
+                      <h4 className={`text-lg font-jakarta ${data.status === 'Pending' ? "text-red-500" : "text-green-500"} `}>* {data.status}</h4>
                       <BsThreeDotsVertical className='size-6' />
                     </div>
                   </div>
