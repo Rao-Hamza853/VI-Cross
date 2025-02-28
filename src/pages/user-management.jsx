@@ -24,6 +24,16 @@ const UserManagement = () => {
     {},
     {},
     {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
   ]
   return (
     <div className='flex'>
@@ -43,29 +53,31 @@ const UserManagement = () => {
         </header>
         <div className=' h-screen px-10 py-5'>
           <div className='grid grid-cols-10 px-8 py-4 rounded-xl'>
-            <h4 className='text-2xl font-semibold text-black-light font-jakarta'>ID</h4>
-            <h4 className='text-2xl font-semibold text-black-light font-jakarta col-span-2'>User Name</h4>
-            <h4 className='text-2xl font-semibold text-black-light font-jakarta col-span-3'>Email</h4>
-            <h4 className='text-2xl font-semibold text-black-light font-jakarta col-span-2'>User Role</h4>
-            <h4 className='text-2xl font-semibold text-black-light font-jakarta col-span-2'>Status</h4>
+            <h4 className='text-xl font-semibold text-black-light font-jakarta'>ID</h4>
+            <h4 className='text-xl font-semibold text-black-light font-jakarta col-span-2'>User Name</h4>
+            <h4 className='text-xl font-semibold text-black-light font-jakarta col-span-3'>Email</h4>
+            <h4 className='text-xl font-semibold text-black-light font-jakarta col-span-2'>User Role</h4>
+            <h4 className='text-xl font-semibold text-black-light font-jakarta col-span-2'>Status</h4>
           </div>
-            {
-              userDetails.map((data, index)=>(
-                <div className='grid grid-cols-10 items-center px-8 py-4' key={index}>
-                  <h4 className='text-lg text-gray font-jakarta'>#78590</h4>
-                  <div className='flex items-center  col-span-2'>
-                    <img src={profilePic} alt="" className='rounded-full w-14' />
-                    <h4 className='text-lg text-gray font-jakarta'>John Doe</h4>
+            <div className='h-screen overflow-y-auto scrollbar-hide pb-10'>
+              {
+                userDetails.map((data, index)=>(
+                  <div className='grid grid-cols-10 items-center px-8 py-4' key={index}>
+                    <h4 className='text-lg text-gray font-jakarta'>#78590</h4>
+                    <div className='flex items-center gap-x-3 col-span-2'>
+                      <img src={profilePic} alt="" className='rounded-full w-10' />
+                      <h4 className='text-lg text-gray font-jakarta'>John Doe</h4>
+                    </div>
+                    <h4 className='text-lg text-gray font-jakarta col-span-3'>Johndoe@gmail.com</h4>
+                    <h4 className='text-lg text-gray font-jakarta col-span-2 pl-7'>User</h4>
+                    <div className='flex items-center justify-between  col-span-2'>
+                      <h4 className='text-lg text-gray font-jakarta'>* Pending</h4>
+                      <BsThreeDotsVertical className='size-6' />
+                    </div>
                   </div>
-                  <h4 className='text-lg text-gray font-jakarta col-span-3'>Johndoe@gmail.com</h4>
-                  <h4 className='text-lg text-gray font-jakarta col-span-2 pl-7'>User</h4>
-                  <div className='flex items-center justify-between  col-span-2'>
-                    <h4 className='text-lg text-gray font-jakarta'>* Pending</h4>
-                    <BsThreeDotsVertical className='size-8' />
-                  </div>
-                </div>
-              ))
-            }
+                ))
+              }
+            </div>
         </div>
       </div>
     </div>

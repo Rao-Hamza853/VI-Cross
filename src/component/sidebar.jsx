@@ -26,7 +26,4 @@ const Sidebar = () => {
 }
 
 export default Sidebar
-{/* <BsGrid /> */}
-{/* <RxCalendar /> */}
-{/* <IoChatboxEllipsesOutline /> */}
-{/* <IoCubeOutline /> */}
+

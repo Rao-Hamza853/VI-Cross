@@ -9,3 +9,7 @@
     
     --font-jakarta:  Plus Jakarta Sans, sans-serif;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
