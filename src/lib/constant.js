@@ -8,7 +8,7 @@ export const links = [
         id : 1,
         title : "User Management",
         icon: HiOutlineViewGrid,
-        path : "/user-management"
+        path : "/"
     },
     {
         id : 2,

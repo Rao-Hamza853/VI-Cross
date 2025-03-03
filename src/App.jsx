@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router'
+import {Route, Routes } from 'react-router'
 
 import TradeBooths from './pages/trade-booths'
 import Suport from './pages/suport'
@@ -9,8 +9,8 @@ import Sidebar from './component/sidebar'
 const App = () => {
   return (
     <Routes>
-      <Route path='/' element={<Navigate to="/user-management"/>} />
-      <Route path='/user-management' element={<UserManagement/>} />
+      {/* <Route path='/' element={<Navigate to="/user-management"/>} /> */}
+      <Route path='/' element={<UserManagement/>} />
       <Route path='/trade-booths' element={<TradeBooths/>} />
       <Route path='/support' element={<Suport/>} />
       <Route path='/list-trade-booths' element={<ListsTradeBooths/>} />
