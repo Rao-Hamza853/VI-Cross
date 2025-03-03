@@ -79,11 +79,17 @@ const UserManagement = () => {
     {
       status : 'Pending'
     },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Pending'
+    },
   ]
   return (
-    <div className='flex'>
+    <div className='flex h-screen overflow-hidden'>
       <Sidebar/>
-      <div className='bg-secondary w-full'>
+      <div className='bg-secondary h-screen w-full'>
         <header className='h-24 px-5 xl:px-8 py-5 2xl:py-4 flex items-center justify-between'>
           <h3 className='text-2xl xl:text-3xl 2xl:text-4xl text-black-light font-bold font-jakarta'>User Management</h3>
           <div className='h-full flex items-center gap-x-6'>
@@ -96,7 +102,7 @@ const UserManagement = () => {
             <ProfileImg/>
           </div>
         </header>
-        <div className=' h-screen px-10 py-5'>
+        <div className='px-10 py-5'>
           <div className='grid grid-cols-10 px-8 py-4 rounded-xl bg-white/85'>
             <h4 className='text-lg xl:text-xl font-semibold text-black-light font-jakarta'>ID</h4>
             <h4 className='text-lg xl:text-xl font-semibold text-black-light font-jakarta col-span-2'>User Name</h4>
@@ -104,7 +110,7 @@ const UserManagement = () => {
             <h4 className='text-lg xl:text-xl font-semibold text-black-light font-jakarta col-span-2'>User Role</h4>
             <h4 className='text-lg xl:text-xl font-semibold text-black-light font-jakarta col-span-2'>Status</h4>
           </div>
-            <div className='h-screen overflow-y-auto scrollbar-hide'>
+            <div className='h-screen overflow-y-auto scrollbar-hide pb-52'>
               {
                 userDetails.map((data, index)=>(
                   <div className={` grid grid-cols-10 items-center rounded-xl px-8 py-2 my-3 ${index % 2 === 0 ? "bg-transparent" :"bg-white/80 "} `} key={index}>
