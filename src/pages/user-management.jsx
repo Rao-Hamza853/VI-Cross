@@ -85,6 +85,30 @@ const UserManagement = () => {
     {
       status : 'Pending'
     },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Active'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Pending'
+    },
+    {
+      status : 'Pending'
+    },
   ]
   return (
     <div className='flex h-screen overflow-hidden'>
