@@ -108,7 +108,7 @@ const UserManagement = () => {
               {
                 userDetails.map((data, index)=>(
                   <div className={` grid grid-cols-10 items-center rounded-xl px-8 py-2 my-3 ${index % 2 === 0 ? "bg-transparent" :"bg-white/80 "} `} key={index}>
-                    <h4 className='text-lg text-gray font-jakarta'>#78590</h4>
+                    <h4 className='text-lg text-gray font-jakarta'>{index}</h4>
                     <div className='flex items-center gap-x-3 col-span-2'>
                       <img src={profilePic} alt="" className='rounded-full w-10' />
                       <h4 className='text-lg text-gray font-jakarta'>John Doe</h4>
