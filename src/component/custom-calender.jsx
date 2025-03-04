@@ -143,7 +143,7 @@ import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function Calendar({ events = [] }) {
-  const [currentDate, setCurrentDate] = useState(new Date(2024, 0, 1)) // January 2024
+  const [currentDate, setCurrentDate] = useState(new Date()) // January 2024
 
   const monthNames = [
     "January",
@@ -234,7 +234,7 @@ export default function Calendar({ events = [] }) {
   return (
     <div className="bg-white rounded-3xl p-4 shadow-sm w-full">
       <div className="flex justify-between items-center mb-2">
-        <h2 className="text-2xl font-bold font-jakarta">
+        <h2 className="text-2xl font-bold font-jakarta text-black-light">
           {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
         </h2>
         <div className="flex gap-4">
@@ -253,12 +253,12 @@ export default function Calendar({ events = [] }) {
 
       <div className="grid grid-cols-7 gap-1 ">
         {dayNames.map((day) => (
-          <div key={day} className="text-center font-medium text-gray-600 py-2">
+          <div key={day} className="text-center font-medium font-jakarta text-black-light py-2">
             {day}
           </div>
         ))}
-        </div>
-        <div className="grid grid-cols-7 gap-1.5 bg-secondary p-1.5 rounded-xl">
+      </div>
+      <div className="grid grid-cols-7 gap-1.5 bg-secondary p-3 rounded-xl">
         {weeks.map((week, weekIndex) =>
           week.map((day, dayIndex) => {
             const eventColors = getEventColors(day.date)
@@ -267,7 +267,7 @@ export default function Calendar({ events = [] }) {
                 key={`${weekIndex}-${dayIndex}`}
                 className={`
                   flex flex-col items-center bg-white justify-center rounded-xl py-2
-                  ${day.currentMonth ? "text-gray-700" : "text-gray-400"}
+                  ${day.currentMonth ? "text-gray" : "text-gray/60"}
                   hover:bg-gray-50
                 `}
               >
