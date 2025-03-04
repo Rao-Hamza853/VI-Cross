@@ -56,7 +56,7 @@ const TradeBooths = () => {
                   ))
                 }
               </div>
-              <div className='bg-red-'>
+              <div className=''>
                 <Calendar/>
               </div>
             </div>
