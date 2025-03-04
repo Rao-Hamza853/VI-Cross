@@ -22,15 +22,15 @@ const TradeBooths = () => {
             </div>
           </header>
           <div className='h-screen px-10 py-5'>
-            <div>
-              <div className='w-[60%] space-y-5'>
-                <div className='flex justify-between'>
+            <div className='grid grid-cols-3 gap-x-8'>
+              <div className='w-[100%] space-y-5 col-span-2'>
+                <div className='flex justify-between pb-2.5 pt-4'>
                   <h4 className='text-2xl font-semibold font-jakarta text-black-light'>Booths List</h4>
                   <button className='text-xl font-jakarta font-medium text-black-light underline underline-offset-2 cursor-pointer'>View All</button>
                 </div>
                 {
                   boothList.map((booth, index)=>(
-                    <div className='flex items-center justify-between px-6 py-4 rounded-2xl bg-white/85'>
+                    <div className='flex items-center justify-between px-6 py-4 rounded-2xl bg-white/85' key={index}>
                   <div className='flex items-center gap-x-3'>
                     <img src={booth.imgURL} alt="" className='rounded-full w-9 xl:w-10' />
                     <h4 className='xl:text-lg text-gray font-jakarta'>Enhancing Engagement: Unleashin...</h4>
@@ -44,7 +44,9 @@ const TradeBooths = () => {
                   ))
                 }
               </div>
-              <CustomCalender/>
+              <div>
+                <CustomCalender/>
+              </div>
             </div>
           </div>
       </div>

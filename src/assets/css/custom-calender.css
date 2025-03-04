@@ -1,23 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import "tailwindcss";
-
-@theme {
-    --color-primary: #2E2460;
-    --color-secondary: #F1F2F6;
-    --color-black-light: #1D1D1D;
-    --color-gray: #686677;
-    
-    --font-jakarta:  Plus Jakarta Sans, sans-serif;
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-
 .react-calendar {
     width: 100%;
     border: none;
     font-family: inherit;
+    border-radius: 16px;
 }
 
 .react-calendar__navigation {
@@ -26,7 +11,7 @@
     align-items: center;
     font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    color: #1D1D1D;
 }
 
 .react-calendar__navigation button {
@@ -35,35 +20,45 @@
     cursor: pointer;
 }
 
+.react-calendar__month-view__days{
+    background-color: #F1F2F6;
+    padding-left: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    row-gap: 6px;
+    column-gap: 8px;
+    border-radius: 12px;
+}
+
 .react-calendar__month-view__days__day {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    height: 30px;
     margin: 4px;
-    background-color: #f3f4f6;
+    background-color: white;
     border-radius: 8px;
     font-weight: 500;
-    color: #333;
+    color: #686667;
     cursor: pointer;
     transition: background-color 0.2s;
-}
-
-.react-calendar__month-view__days__day:hover {
-    background-color: #e5e7eb;
 }
 
 .react-calendar__month-view__weekdays {
     text-transform: capitalize;
     font-weight: 600;
-    color: #6b7280;
+    color: #1D1D1D;
     margin-bottom: 0.5rem;
+    margin-top: -12px;
 }
 
 .react-calendar__tile--now {
-    background: #e5e7eb;
+    
+    border-radius: 8px;
+}
+.react-calendar__tile--hover {
+    background: red;
     border-radius: 8px;
 }
 

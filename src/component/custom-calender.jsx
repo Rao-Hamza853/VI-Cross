@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Optional icons, install lucide-react if needed
+import '../assets/css/custom-calender.css'
+
 
 const events = [
   { date: "2024-01-10", color: "bg-green-500" },
@@ -30,7 +32,7 @@ const CustomCalender = () => {
     };
   
     return (
-      <div className="p-4 max-w-md mx-auto bg-white rounded-xl shadow-md">
+      <div className="px-4 pb-4  bg-white rounded-2xl w-[95%]">
         <Calendar
           onChange={setDate}
           calendarType="islamic"
