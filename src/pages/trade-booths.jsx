@@ -60,7 +60,7 @@ const TradeBooths = () => {
                 <Calendar/>
               </div>
             </div>
-            <div className='pb-28'>
+            <div className='pb-10'>
               <WeeklyCalendar/>
             </div>
           </div>
