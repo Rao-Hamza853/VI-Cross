@@ -24,8 +24,8 @@ const TradeBooths = () => {
   return (
     <div className='flex h-screen overflow-hidden'>
       <Sidebar/>
-      <div className='bg-secondary h-screen w-full'>
-        <header className='h-24 px-5 xl:px-8 py-5 2xl:py-4 flex items-center justify-between'>
+      <div className='bg-secondary h-screen w-full pb-[]'>
+        <header className='h-20 px-5 xl:px-8 py-5 2xl:py-4 flex items-center justify-between'>
             <h3 className='text-2xl xl:text-3xl 2xl:text-4xl text-black-light font-bold font-jakarta'>Trade Booths</h3>
             <div className='h-full flex items-center gap-x-6'>
               <SearchBox/>
@@ -33,7 +33,7 @@ const TradeBooths = () => {
               <ProfileImg/>
             </div>
           </header>
-          <div className='h-screen overflow-y-auto scrollbar-hide px-10 py-5'>
+          <div className='h-screen overflow-y-auto scrollbar-hide px-10 py-2'>
             <div className='grid grid-cols-3 gap-x-8'>
               <div className='w-[100%] space-y-5 col-span-2'>
                 <div className='flex justify-between pb-2.5 pt-4'>
@@ -56,12 +56,13 @@ const TradeBooths = () => {
                   ))
                 }
               </div>
-              <div className=''>
+              <div>
                 <Calendar/>
               </div>
             </div>
-            {/* <CalendarSchedule/> */}
-            <WeeklyCalendar/>
+            <div className='pb-10'>
+              <WeeklyCalendar/>
+            </div>
           </div>
       </div>
     </div>

@@ -94,7 +94,7 @@ export default function WeeklyCalendar() {
   }
 
   return (
-    <div className="rounded-2xl py-6 bg-white/85 mt-4">
+    <div className="rounded-2xl py-6 bg-white/85 mt-5">
       <div className="flex justify-between items-center mb-4 px-5">
         <button className="flex items-center gap-2 bg-primary text-white font-jakarta px-4 py-2 rounded-md cursor-pointer">
           <Plus size={16} /> Add Trade Booths

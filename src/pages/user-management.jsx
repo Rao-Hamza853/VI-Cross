@@ -114,19 +114,19 @@ const UserManagement = () => {
     <div className='flex h-screen overflow-hidden'>
       <Sidebar/>
       <div className='bg-secondary h-screen w-full'>
-        <header className='h-24 px-5 xl:px-8 py-5 2xl:py-4 flex items-center justify-between'>
+        <header className='h-20 px-5 xl:px-8 py-5 2xl:py-4 flex items-center justify-between'>
           <h3 className='text-2xl xl:text-3xl 2xl:text-4xl text-black-light font-bold font-jakarta'>User Management</h3>
           <div className='h-full flex items-center gap-x-6'>
             <div className='flex items-center justify-center h-full p-3 gap-x-3 bg-primary rounded-2xl drop-shadow-lg'>
-              <button className='text-white xl:text-xl font-semibold font-jakarta'>Add Member</button>
-              <FaPlus className='fill-white xl:size-6'/>
+              <button className='text-white xl:text-lg px-2 font-semibold font-jakarta'>Add Member</button>
+              <FaPlus className='fill-white xl:size-5'/>
             </div>
             <SearchBox/>
             <NotificationBtn/>
             <ProfileImg/>
           </div>
         </header>
-        <div className='px-10 py-5'>
+        <div className='px-10 py-3'>
           <div className='grid grid-cols-10 px-8 py-4 rounded-xl bg-white/85'>
             <h4 className='text-lg xl:text-xl font-semibold text-black-light font-jakarta'>ID</h4>
             <h4 className='text-lg xl:text-xl font-semibold text-black-light font-jakarta col-span-2'>User Name</h4>
