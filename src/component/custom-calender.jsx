@@ -94,7 +94,7 @@ export default function Calendar({ events = [] }) {
   }
 
   return (
-    <div className="bg-white rounded-3xl p-4 shadow-sm w-full">
+    <div className="bg-white/85 rounded-3xl p-4 shadow-sm w-full">
       <div className="flex justify-between items-center mb-2">
         <h2 className="text-2xl font-bold font-jakarta text-black-light">
           {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}

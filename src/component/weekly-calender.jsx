@@ -21,7 +21,8 @@ export default function WeeklyCalendar() {
       endTime: "09:00",
       title: "Event",
       type: "event",
-      color: "bg-pink-200",
+      color: "bg-[#FFCFCF]",
+      divBg: "bg-[#FF6B6B]",
       rowSpan: 2, // Span 2 rows
     },
     {
@@ -30,7 +31,8 @@ export default function WeeklyCalendar() {
       endTime: "12:00",
       title: "Presentations",
       type: "presentations",
-      color: "bg-purple-200",
+      color: "bg-[#FFE2FE]",
+      divBg: "bg-[#FF7CFA]",
       rowSpan: 2,
     },
     {
@@ -39,7 +41,8 @@ export default function WeeklyCalendar() {
       endTime: "10:00",
       title: "Webinars",
       type: "webinars",
-      color: "bg-blue-200",
+      color: "bg-[#B3C8FF]",
+      divBg: "bg-[#2B4FFE]",
       rowSpan: 2,
     },
     {
@@ -48,7 +51,8 @@ export default function WeeklyCalendar() {
       endTime: "11:00",
       title: "Presentations",
       type: "presentations",
-      color: "bg-yellow-200",
+      color: "bg-[#F8FFD7]",
+      divBg: "bg-[#DBFF3D]",
       rowSpan: 2,
     },
     {
@@ -57,7 +61,8 @@ export default function WeeklyCalendar() {
       endTime: "09:00",
       title: "Webinars",
       type: "webinars",
-      color: "bg-blue-200",
+      color: "bg-[#B9CDFF]",
+      divBg: "bg-[#2B4FFE]",
       rowSpan: 2,
     },
   ]
@@ -89,7 +94,7 @@ export default function WeeklyCalendar() {
   }
 
   return (
-    <div className="rounded-2xl p-4 bg-white mt-4">
+    <div className="rounded-2xl py-6 bg-white/85 mt-4">
       <div className="flex justify-between items-center mb-4 px-5">
         <button className="flex items-center gap-2 bg-primary text-white font-jakarta px-4 py-2 rounded-md cursor-pointer">
           <Plus size={16} /> Add Trade Booths
@@ -123,13 +128,13 @@ export default function WeeklyCalendar() {
       </div>
 
       {/* Calendar table with wider columns and shorter rows */}
-      <div className="w-full border rounded-md overflow-hidden">
+      <div className="w-full borde rounded-md overflow-hidden">
         <table className="w-full border-collapse">
-          <thead>
+          <thead className="border-t-2 border-gray-200">
             <tr>
-              <th className="border w- h-"></th>
+              <th className="border-r border-gray-200"></th>
               {days.map((day) => (
-                <th key={day} className="border w-40 h-12 text-center font-semibold font-jakarta text-black-light">
+                <th key={day} className="w-40 h-12 text-center font-semibold font-jakarta text-black-light">
                   {day}
                 </th>
               ))}
@@ -138,7 +143,7 @@ export default function WeeklyCalendar() {
           <tbody>
             {timeSlots.map((time, timeIndex) => (
               <tr key={time} className="h-10">
-                <td className="border p-2 text-sm text-gray-600 w-20">{time}</td>
+                <td className="border border-l-0 border-gray-200 p-2 text-base text-gray font-medium text-center w-20">{time}</td>
 
                 {days.map((day) => {
                   const event = getEventForTimeSlotAndDay(time, day)
@@ -152,15 +157,18 @@ export default function WeeklyCalendar() {
                   return (
                     <td
                       key={`${day}-${time}`}
-                      className="border relative p-0"
+                      className="border border-gray-200 relative p-0"
                       rowSpan={isStart && event ? event.rowSpan : 1}
                     >
                       {isStart && event && (
-                        <div className={`${event.color} h-full w-full p-5 flex flex-col`}>
-                          <div>
-                            <div></div>
-                            <div className="text-sm">{`${event.startTime} - ${event.endTime}`}</div>
-                            <div className="text-sm">{event.title}</div>
+                        <div className={`${event.color} h-full w-full py-5 px-4 flex flex-col`}>
+                          <div className="flex items-center gap-x-1.5">
+                            <div className={`${event.divBg} w-1 h-9 rounded`}>
+                            </div>
+                            <div>
+                              <div className="font-jakarta text-black-light text-sm font-medium">{`${event.startTime} - ${event.endTime}`}</div>
+                              <div className="font-jakarta text-gray text-sm font-medium">{event.title}</div>
+                            </div>
                           </div>
                         </div>
                       )}
