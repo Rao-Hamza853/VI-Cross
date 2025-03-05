@@ -7,7 +7,7 @@ import BoothPic1 from '../assets/img/booth-pic-1.png'
 import AcceptBtn from '../component/ui/accept-btn'
 import { boothList } from '../lib/constants1'
 import Calendar from '../component/custom-calender'
-// import CustomCalender from '../component/custom-calender'
+import WeeklyCalendar from '../component/weekly-calender'
 
 const TradeBooths = () => {
     // Sample events for January 2024
@@ -45,7 +45,7 @@ const TradeBooths = () => {
                     <div className='flex items-center justify-between px-6 py-6 rounded-2xl bg-white/85' key={index}>
                   <div className='flex items-center gap-x-3'>
                     <img src={booth.imgURL} alt="" className='rounded-full w-9 xl:w-10' />
-                    <h4 className='xl:text-lg text-gray font-jakarta'>Enhancing Engagement: Unleashin...</h4>
+                    <h4 className='xl:text-lg text-gray font-jakarta whitespace-nowrap overflow-hidden overflow-ellipsis'>Enhancing Engagement: Unleashin...</h4>
                   </div>
                   <h4 className='xl:text-lg text-gray font-jakarta'>24 Jan, 2024 / 10:00 AM</h4>
                   <div className='flex gap-x-2'>
@@ -60,6 +60,8 @@ const TradeBooths = () => {
                 <Calendar/>
               </div>
             </div>
+            {/* <CalendarSchedule/> */}
+            <WeeklyCalendar/>
           </div>
       </div>
     </div>
