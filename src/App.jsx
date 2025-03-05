@@ -5,6 +5,7 @@ import Suport from './pages/suport'
 import ListsTradeBooths from './pages/lists-trade-booths'
 import UserManagement from './pages/user-management'
 import Sidebar from './component/sidebar'
+import AddTradeBooths from './component/add-trade-booths'
 
 const App = () => {
   return (

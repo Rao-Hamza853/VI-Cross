@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { ChevronDown, Plus } from "lucide-react"
 
-export default function WeeklyCalendar() {
+export default function WeeklyCalendar({handleAddTradeBooths}) {
   const [currentMonth, setCurrentMonth] = useState("April 2024")
   const [viewMode, setViewMode] = useState("Week")
 
@@ -96,9 +96,9 @@ export default function WeeklyCalendar() {
   return (
     <div className="rounded-2xl py-3 bg-white/85 mt-5">
       <div className="flex justify-between items-center mb-4 px-5">
-        <button className="flex items-center gap-2 bg-primary text-white font-jakarta px-4 py-2 rounded-md cursor-pointer">
-          <Plus size={16} /> Add Trade Booths
-        </button>
+          <button onClick={handleAddTradeBooths} className="flex items-center gap-2 bg-primary text-white font-jakarta px-4 py-2 rounded-md cursor-pointer">
+            <Plus size={16} /> Add Trade Booths
+          </button>
         <div className="flex items-center gap-10">
           <div className="flex gap-2 rounded-md overflow-hidden">
             <button

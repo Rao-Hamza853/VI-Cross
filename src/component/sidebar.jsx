@@ -4,7 +4,7 @@ import { links } from '../lib/constant';
 
 
 
-const Sidebar = () => {
+const Sidebar = ({handleBothStates}) => {
   const location = useLocation()
   return (
     <div className='bg-primary h-screen w-[20%] p-3 xl:p-5 2xl:p-8'>
@@ -13,7 +13,7 @@ const Sidebar = () => {
         <div className='w-full space-y-3'>
           {
             links.map((link)=>(
-              <Link to={link.path} key={link.id} className={`${location.pathname === link.path ? "bg-white" : "bg-transparent"} flex items-center gap-1.5 px-2 py-2 xl:py-3 xl:gap-4 xl:px-4 2xl:py-5 rounded-xl`}>
+              <Link to={link.path} onClick={handleBothStates} key={link.id} className={`${location.pathname === link.path ? "bg-white" : "bg-transparent"} flex items-center gap-1.5 px-2 py-2 xl:py-3 xl:gap-4 xl:px-4 2xl:py-5 rounded-xl`}>
                 <link.icon  className={`${location.pathname === link.path ? "text-primary" : "text-white"} size-5`} />
                 <p className={`xl:text-xl ${location.pathname === link.path ? "text-primary" : "text-white"} ${location.pathname === link.path ? "font-extrabold" : "font-normal"} leading-5 font-jakarta`}>{link.title}</p>
               </Link>
