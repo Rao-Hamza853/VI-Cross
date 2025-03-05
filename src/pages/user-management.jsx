@@ -134,7 +134,7 @@ const UserManagement = () => {
             <h4 className='text-lg xl:text-xl font-semibold text-black-light font-jakarta col-span-2'>User Role</h4>
             <h4 className='text-lg xl:text-xl font-semibold text-black-light font-jakarta col-span-2'>Status</h4>
           </div>
-            <div className='h-screen overflow-y-auto scrollbar-hide pb-52'>
+            <div className='h-screen overflow-y-auto scrollbar-hide pb-40'>
               {
                 userDetails.map((data, index)=>(
                   <div className={` grid grid-cols-10 items-center rounded-xl px-8 py-2 my-3 ${index % 2 === 0 ? "bg-transparent" :"bg-white/80 "} `} key={index}>
